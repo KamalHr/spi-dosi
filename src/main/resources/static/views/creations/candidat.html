@@ -1,0 +1,134 @@
+<br/>
+<br/>
+<div class="row">
+    <div class="col align-self-center">
+        <div class="card">
+            <div class="card-header bg-dark text-light">
+                Create candidat
+            </div>
+            <form ng-submit="newCandidat()">
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col">
+                            <div class="form-group">
+                                <label for="noCandidat">N° Candidat</label>
+                                <input ng-model="candidat.noCandidat" type="text" class="form-control" id="noCandidat" placeholder="Nom du candidat">
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="form-group">
+                                <label for="nom">Nom</label>
+                                <input ng-model="candidat.nom" type="text" class="form-control" id="nom" placeholder="Nom du candidat">
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="form-group">
+                                <label for="prenom">Prenom</label>
+                                <input ng-model="candidat.prenom" type="text" class="form-control" id="prenom" placeholder="Prenom du candidat">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <div class="form-group">
+                                <label for="ville">Ville</label>
+                                <select ng-model="candidat.ville" class="form-control" id="ville">
+                                    <option value="Agadir">Agadir</option>
+                                    <option value="Marrakech">Marrakech</option>
+                                    <option value="Rabat">Rabat</option>
+                                    <option value="Tanger">Tanger</option>
+                                    <option value="Fes">Fes</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="form-group">
+                                <label for="sexe">Sexe</label>
+                                <select ng-model="candidat.sexe" class="form-control" id="sexe">
+                                    <option value="M">M</option>
+                                    <option value="M">F</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <div class="form-group">
+                                <label for="date">Date de naissance</label>
+                                <input ng-model="candidat.dateNaissance" type="date" class="form-control" id="date" placeholder="Date de naissance du candidat">
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="form-group">
+                                <label for="lieu">Lieu de naissance</label>
+                                <input ng-model="candidat.lieuNaissance" type="text" class="form-control" id="lieu" placeholder="Lieu de naissance du candidat">
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="form-group">
+                                <label for="adresse">Adresse</label>
+                                <input ng-model="candidat.adresse" type="text" class="form-control" id="adresse" placeholder="Adresse du candidat">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <div class="form-group">
+                                <label for="email">Email</label>
+                                <input ng-model="candidat.email" type="email" class="form-control" id="email" placeholder="Email du candidat">
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="form-group">
+                                <label for="mobile">Mobile</label>
+                                <input ng-model="candidat.mobile" type="text" class="form-control" id="mobile" placeholder="Mobile du candidat">
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="form-group">
+                                <label for="universite">Université d'origine</label>
+                                <select ng-model="candidat.universiteOrigine" class="form-control" id="universite">
+                                    <option value="UIZ">UIZ</option>
+                                    <option value="UCAM">UCAM</option>
+                                    <option value="UMP">UMP</option>
+                                    <option value="UM5">UM5</option>
+                                    <option value="UMS">UMS</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <div class="form-group">
+                                <label for="nationalite">Nationalité</label>
+                                <select ng-model="candidat.nationalite" class="form-control" id="nationalite">
+                                    <option value="Marocaine">Maroc</option>
+                                    <option value="Française">France</option>
+                                    <option value="Allmand">Allemand</option>
+                                    <option value="usa">USA</option>
+                                    <option value="ES">Espagne</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="form-group">
+                                <label for="pays">Pays</label>
+                                <select ng-model="candidat.paysOrigine" ng-options="country.name as country.name for country in countries" class="form-control" id="pays"></select>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="form-group">
+                                <label for="promotion">Promotion</label>
+                                <select class="form-control" ng-model="candidat.promotion.id" id="promotion" ng-options="promotion.id as promotion.siglePromotion for promotion in promotions">
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-footer">
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

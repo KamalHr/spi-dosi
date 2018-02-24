@@ -1,0 +1,47 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" ui-sref="home">SPI DOSI</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02"
+        aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+        <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+
+        </ul>
+        <form class="form-inline my-2 my-lg-0">
+            <select ng-change="changeLang()" ng-model="lang" class="form-control mr-sm-2" name="" id="">
+                <option value="EN">EN</option>
+                <option value="FR">FR</option>
+            </select>
+        </form>
+    </div>
+</nav>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col">
+            <div class="panel panel-danger">
+                <div class="panel-heading">
+                    <h2 class="text-center">Menu</h2>
+                </div>
+                <div class="panel-body">
+                    <div class="list-group">
+                        <a ui-sref="home" ui-sref-active='active' class="list-group-item list-group-item-action">
+                            Dashboard
+                        </a>
+                        <a ui-sref="candidats" ui-sref-active='active bg-info' class="list-group-item list-group-item-action">
+                            Candidats
+                        </a>
+                        <a ui-sref="enseignants" ui-sref-active='active bg-danger' class="list-group-item list-group-item-action">
+                            Enseignants
+                        </a>
+                        <a ui-sref="formations" ui-sref-active='active bg-dark' class="list-group-item list-group-item-action">Formations</a>
+                        <a ui-sref="promotions" ui-sref-active='active bg-warning' class="list-group-item list-group-item-action">Promotions</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-9">
+            <ui-view name="home"></ui-view>
+        </div>
+    </div>
+</div>

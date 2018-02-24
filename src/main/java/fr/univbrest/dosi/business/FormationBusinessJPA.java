@@ -36,9 +36,8 @@ public class FormationBusinessJPA implements FormationBusiness {
 	}
 
 	@Override
-	public List<Formation> rechercheFormationParNoFormation(String id) {
-		// TODO Auto-generated method stub
-		return formationRepo.findByCodeFormation(id);
+	public Formation rechercheFormationParNoFormation(String id) {
+		return formationRepo.findOne(id);
 	}
 
 	@Override
@@ -49,6 +48,11 @@ public class FormationBusinessJPA implements FormationBusiness {
 	@Override
 	public void supprimerFormation(Formation formationASuppr) {
 		formationRepo.delete(formationASuppr);
+	}
+
+	@Override
+	public Formation mettreAJourFormation(Formation formationAMettreAJour) {
+		return formationRepo.save(formationAMettreAJour);
 	}
 
 }

@@ -31,7 +31,6 @@ public class FormationBusinessJPATest {
 	}
 }
 
-@Repository
 class FormationRepositoryList implements FormationRepository{
 	private List<Formation> data;
 	

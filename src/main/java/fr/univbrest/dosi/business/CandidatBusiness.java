@@ -9,7 +9,7 @@ public interface CandidatBusiness {
 	void supprimerCandidat(Candidat candidatASuppr);
 	void supprimerCandidat(String noCandidatASuppr);
 	List<Candidat> rechercheCandidatParNom(String Nom);
-	List<Candidat> rechercheCandidatParID(String id);
+	Candidat rechercheCandidatParID(String id);
 	List<Candidat> rechercheCandidatParUniversite(String Universite);
 	List<Candidat> recupererTousLesCandidats();
 }

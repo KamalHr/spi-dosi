@@ -50,8 +50,8 @@ public class CandidatBusinessJPA implements CandidatBusiness {
 	}
 
 	@Override
-	public List<Candidat> rechercheCandidatParID(String id) {
-		return candidatRepo.findByNoCandidat(id);
+	public Candidat rechercheCandidatParID(String id) {
+		return candidatRepo.findOne(id);
 	}
 
 }

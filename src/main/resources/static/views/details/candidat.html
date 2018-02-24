@@ -1,0 +1,45 @@
+<div class="container-fluid">
+    <br/>
+    <div class="row">
+        <div class="col">
+            <div class="card">
+                <div class="card-header bg-dark text-light">
+                    <h4 class="text-center">{{candidat.nom+" "+candidat.prenom}}</h4>
+                </div>
+                <div class="card-body">
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item">Date de naissance: {{candidat.dateNaissance}}</li>
+                        <li class="list-group-item">Lieu de naissance: {{candidat.lieuNaissance}}</li>
+                        <li class="list-group-item">Email: {{candidat.email}}</li>
+                        <li class="list-group-item">Adresse: {{candidat.adresse}}</li>
+                        <li class="list-group-item">Téléphone: {{candidat.mobile}}</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="col-8">
+            <div class="card">
+                <div class="card-header">Formation</div>
+                <div class="card-body">
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item">Code Formation: {{candidat.promotion.formation.codeFormation}}</li>
+                        <li class="list-group-item">Formation: {{candidat.promotion.formation.nomFormation}}</li>
+                        <li class="list-group-item">Diplome: {{candidat.promotion.formation.diplome}}</li>
+                        <li class="list-group-item">Nombre d'année: {{candidat.promotion.formation.n0Annee}}</li>
+                    </ul>
+                </div>
+            </div>
+            <br/>
+            <div class="card">
+                <div class="card-header">Promotion</div>
+                <div class="card-body">
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item">Année universitaire: {{candidat.promotion.id.anneeUniversitaire}}</li>
+                        <li class="list-group-item">Sigle de promotion: {{candidat.promotion.siglePromotion}}</li>
+                        <li class="list-group-item">Enseignant: <a ui-sref="enseignantDetails({id: candidat.promotion.enseignant.noEnseignant})">{{candidat.promotion.enseignant.prenom + " "+candidat.promotion.enseignant.nom}}</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

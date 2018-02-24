@@ -1,0 +1,129 @@
+<div class="row">
+    <div class="col">
+        <br/>
+        <div class="card">
+            <div class="card-header">
+                <div class="card-title">Promotions
+                    <a ui-sref="newPromotion" class="btn btn-danger float-right">
+                        <i class="fa fa-plus"></i>
+                    </a>
+                </div>
+
+            </div>
+            <div class="card-body">
+                <table class="table" id="promotions">
+                    <thead class="thead-dark">
+                        <tr>
+                            <th scope="col">Code Formation</th>
+                            <th scope="col">Année Universitaire</th>
+                            <th scope="col">Sigle Promotion</th>
+                            <th scope="col">Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr ng-repeat="promotion in promotions">
+                            <th scope="row">{{promotion.id.codeFormation}}</th>
+                            <td>{{promotion.id.anneeUniversitaire}}</td>
+                            <td>{{promotion.siglePromotion}}</td>
+                            <td>
+                                <div class="row">
+                                    <div class="col-6">
+                                        <div class="row">
+                                            <div class="btn-group" role="group">
+                                                <a ui-sref="promotionDetails({id: promotion.id})" class="btn btn-info">
+                                                    <i class="fa fa-info"></i>
+                                                </a>
+                                                <button ng-click="updatePromotion(promotion)" type="button" class="btn btn-warning">
+                                                    <i class="fa fa-edit"></i>
+                                                </button>
+                                                <button ng-click="delete(promotion.noEnseignant)" type="button" class="btn btn-danger">
+                                                    <i class="fa fa-trash"></i>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="modal fade" id="updateEnseignant" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLongTitle">Update Enseignant {{enseignantToUpdate.noEnseignant}}</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <form ng-submit="doneUpdateFormation()">
+                        <div class="modal-body">
+                            <div class="card-body">
+                                <div class="row">
+                                    <div class="col">
+                                        <div class="form-group">
+                                            <label for="noCandidat">Code Formation</label>
+                                            <input ng-model="formationToUpdate.codeFormation" type="text" class="form-control" disabled="true" id="noCandidat" placeholder="Code formation">
+                                        </div>
+                                    </div>
+                                    <div class="col">
+                                        <div class="form-group">
+                                            <label for="nom">Nom Formation</label>
+                                            <input ng-model="formationToUpdate.nomFormation" type="text" class="form-control" id="nom" placeholder="Nom du candidat">
+                                        </div>
+                                    </div>
+                                    <div class="col">
+                                        <div class="form-group">
+                                            <label for="prenom">Nombre d'année</label>
+                                            <input ng-model="formationToUpdate.n0Annee" type="text" class="form-control" id="prenom" placeholder="Prenom du candidat">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col">
+                                        <div class="form-group">
+                                            <label for="ville">Diplome</label>
+                                            <select ng-model="formationToUpdate.diplome" class="form-control" id="ville">
+                                                <option value="M">Master</option>
+                                                <option value="L">Licence</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="col">
+                                        <div class="form-group">
+                                            <label for="sexe">Double Diplome</label>
+                                            <select ng-model="formationToUpdate.doubleDiplome" class="form-control" id="sexe">
+                                                <option value="O">Oui</option>
+                                                <option value="N">Non</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col">
+                                        <div class="form-group">
+                                            <label for="date">Debut Accreditation</label>
+                                            <input ng-model="formationToUpdate.debutAccreditation" type="date" class="form-control" id="date" placeholder="Date de naissance du candidat">
+                                        </div>
+                                    </div>
+                                    <div class="col">
+                                        <div class="form-group">
+                                            <label for="lieu">Fin Accreditation</label>
+                                            <input ng-model="formationToUpdate.finAccreditation" type="date" class="form-control" id="lieu" placeholder="Lieu de naissance du candidat">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                            <button type="submit" class="btn btn-primary">Save changes</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

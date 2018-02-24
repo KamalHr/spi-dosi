@@ -1,0 +1,72 @@
+<br/>
+<br/>
+<div class="row">
+    <div class="col align-self-center">
+        <div class="card">
+            <div class="card-header bg-dark text-light">
+                Create formation
+            </div>
+            <form ng-submit="newFormation()">
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col">
+                            <div class="form-group">
+                                <label for="noCandidat">Code Formation</label>
+                                <input ng-model="formation.codeFormation" type="text" class="form-control" id="noCandidat" placeholder="Code formation">
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="form-group">
+                                <label for="nom">Nom Formation</label>
+                                <input ng-model="formation.nomFormation" type="text" class="form-control" id="nom" placeholder="Nom du formation">
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="form-group">
+                                <label for="prenom">Nombre d'année</label>
+                                <input ng-model="formation.n0Annee" type="text" class="form-control" id="prenom" placeholder="Nombre d'année">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <div class="form-group">
+                                <label for="ville">Diplome</label>
+                                <select ng-model="formation.diplome" class="form-control" id="ville">
+                                    <option value="M">Master</option>
+                                    <option value="L">Licence</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="form-group">
+                                <label for="sexe">Double Diplome</label>
+                                <select ng-model="formation.doubleDiplome" class="form-control" id="sexe">
+                                    <option value="O">Oui</option>
+                                    <option value="N">Non</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <div class="form-group">
+                                <label for="date">Debut Accreditation</label>
+                                <input ng-model="formation.debutAccreditation" type="date" class="form-control" id="date" placeholder="Date de naissance du candidat">
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="form-group">
+                                <label for="lieu">Fin Accreditation</label>
+                                <input ng-model="formation.finAccreditation" type="date" class="form-control" id="lieu" placeholder="Lieu de naissance du candidat">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-footer">
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

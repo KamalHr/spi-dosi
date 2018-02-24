@@ -159,11 +159,5 @@ class CandidatRepositoryList implements CandidatRepository{
 				.filter(candidat -> candidat.getUniversiteOrigine().matches(universiteOrigine))
 				.collect(Collectors.toList());
 	}
-
-	@Override
-	public List<Candidat> findByNoCandidat(String universiteOrigine) {
-		// TODO Auto-generated method stub
-		return null;
-	}
 	
 }

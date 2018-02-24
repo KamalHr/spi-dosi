@@ -8,7 +8,8 @@ public interface FormationBusiness {
 	Formation creerFormation(Formation formationACreer);
 	List<Formation> recupererToutesLesFormations();
 	List<Formation> rechercheFormationParNom(String nom);
-	List<Formation> rechercheFormationParNoFormation(String id);
+	Formation rechercheFormationParNoFormation(String id);
 	void supprimerFormationParCodeFormation(String id);
 	void supprimerFormation(Formation formationASuppr);
+	Formation mettreAJourFormation(Formation formationAMettreAJour);
 }
